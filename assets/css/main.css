@@ -1,0 +1,88 @@
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:400,700,400italic,700italic);
+
+::selection {
+   background: #ffb7b7; /* Safari */
+   }
+::-moz-selection {
+   background: #ffb7b7; /* Firefox */
+}
+
+body {
+	font-family: 'Ubuntu', sans-serif;
+	margin: auto; /* center in viewport */
+	width: 960px;
+	height: 100%;
+	color: #a90329;
+	background: url(/assets/image/bgroundTexture.png);
+}
+h1 {
+	text-shadow: 2px 2px #111111;
+	color: #F5DEDE;
+}
+a         {color: #FF0000;}
+a:active  {color: #CC4444;}
+a:visited {color: #DD0000;}
+#header {
+	position: absolute;
+	top: 0px; left: 0px;
+	width: 100%;
+	background-color: #B20000;
+	box-shadow: 0px 2px 3px #450000;
+	/* Pretty Gradient Background */
+	background: #a90329; /* Old browsers */
+	background: -moz-linear-gradient(top, #a90329 0%, #8f0222 44%, #6d0019 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a90329), color-stop(44%,#8f0222), color-stop(100%,#6d0019)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #a90329 0%,#8f0222 44%,#6d0019 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #a90329 0%,#8f0222 44%,#6d0019 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #a90329 0%,#8f0222 44%,#6d0019 100%); /* IE10+ */
+	background: linear-gradient(top, #a90329 0%,#8f0222 44%,#6d0019 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019',GradientType=0 ); /* IE6-9 */	
+}
+#header h1 {
+	font-size: 1.5em;
+	letter-spacing:0.08em;
+	margin: 5px 0 5px 30px;
+	text-shadow: 2px 2px #111111;
+	color: #F5DEDE;
+}
+#header a {
+	color: inherit;
+	text-decoration: none;
+}
+#content {
+	margin-top: 0px;
+	padding: 75px;
+	margin-bottom: 70px;
+	min-height: 100%;
+	background-color: white;
+	border-radius: 0 0 20px 20px;
+	box-shadow: inset 0px 2px 3px #110000;
+}
+.post {
+	border-bottom: solid 1px #E4CDCD ;
+}
+.post h1 a {
+	color: #F5DEDE;
+	text-decoration: none;
+}
+.post .meta {
+	font-size: 0.9em;
+	margin-left: 25px;
+}
+.post .text {
+	display: block;
+	margin: 1em 0 1em 0.5em;
+}
+* html #content {
+	height: 100%;
+}
+footer {
+	height: 30px;
+	margin-top: 30px;
+	color: #443333;
+	text-align: center;
+	padding-top: 20px;
+	border-radius: 20px 20px 0 0;
+	background: #DDDDDD;
+	box-shadow: inset 0px 2px 3px #110000;
+}
