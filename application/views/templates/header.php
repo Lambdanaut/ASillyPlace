@@ -12,13 +12,3 @@
 		<h1><a href="/">A Silly Place</a></h1>
 	</div>
 	<div id="content">
-		<div class="post">
-			<h1><a href="">A HEADER</a></h1>
-			<div class="meta">
-				<strong>Posted: </strong><i>November 6, 1991 </i><br />
-				<strong>By: </strong><i>Anonymous</i>
-			</div>
-			<div class="text">
-				This is the paragraph.
-			</div>
-		</div>

@@ -30,28 +30,29 @@ class Blog extends CI_Controller {
 		$this->load->view('blog/view', $data);
 		$this->load->view('templates/footer');
 	}
-	public function create()
+	public function post()
 	{
 		$this->load->helper('form');
 		$this->load->library('form_validation');
 
-		$data['title'] = 'Create a blog item';
+		$data['title'] = 'Write a Silly Post';
 
 		$this->form_validation->set_rules('title','Title','required');
+		$this->form_validation->set_rules('author','Author','optional');
 		$this->form_validation->set_rules('text','Text','required');
 
 		if ($this->form_validation->run() === FALSE) 
 		{
 			$this->load->view('templates/header', $data);
-			$this->load->view('blog/create');
+			$this->load->view('blog/post');
 			$this->load->view('templates/footer');
 		}
 		else
 		{
 			$this->load->helper('url');		
-			$slug=url_title($this->input->post('title'), 'dash', TRUE);
+			$slug=rand_string() . "-" . url_title($this->input->post('title'), 'dash', TRUE);
 			$this->blog_model->set_blog($slug);
-			redirect('blog/'.$slug, 'refresh');
+			redirect('/'.$slug, 'refresh');
 		}
 	}
 }

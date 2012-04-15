@@ -38,11 +38,9 @@
 |
 */
 
-$route['blog/create'] = 'blog/create';
+$route['blog/post'] = 'blog/post';
 $route['(:any)'] = 'blog/view/$1';
 $route['default_controller'] = 'blog/index';
-$route['404_override'] = '';
-
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

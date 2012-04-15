@@ -461,6 +461,22 @@ if ( ! function_exists('prep_url'))
 }
 
 // ------------------------------------------------------------------------
+/**
+ * Returns a random string
+ * 
+ */
+if ( ! function_exists('rand_string' ) ) 
+{
+	function rand_string ($lengthOfString = 6)
+	{
+		$arr = str_split('ABCDEFGHIJKLMNOP'); // get all the characters into an array
+		shuffle($arr); // randomize the array
+		$arr = array_slice($arr, 0, $lengthOfString); // get the first six (random) characters out
+		return implode('', $arr); // smush them back into a string
+	}
+}
+
+// ------------------------------------------------------------------------
 
 /**
  * Create URL Title
