@@ -1,5 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Ubuntu:400,700,400italic,700italic);
 
+/* Pink Highlight */
 ::selection {
    background: #ffb7b7; /* Safari */
    }
@@ -9,6 +10,7 @@
 
 html {height: 100%;}
 body {
+	overflow-x: hidden;
 	font-family: 'Ubuntu', sans-serif;
 	margin: auto; /* center in viewport */
 	width: 960px;
@@ -26,15 +28,16 @@ a:visited {color: #DD0000;}
 a:hover   {color: #FF7777;}
 input {
 	display: block;
-	border: solid 1px #E4CDCD;
+	border: solid 1px #E4BBBB;
 	margin-bottom: 5px;
 }
 textarea {
 	display: block;
-	border: solid 1px #E4CDCD;
+	border: solid 1px #E4BBBB;
 	width: 100%;
 	margin: 2px 0 5px 0;
-	
+
+	/* Stretch textarea on hover or focus */
 	height: 60px;
 	-webkit-transition: all 0.5s ease-in-out;
 	-moz-transition: all 0.5s ease-in-out;
@@ -42,10 +45,8 @@ textarea {
 	-ms-transition: all 0.5s ease-in-out;
 	transition: all 0.5s ease-in-out;
 }
-textarea:focus
-{
-	height: 200px;
-}
+textarea:focus{ height: 200px; }
+textarea:hover{ height: 200px; }
 label {
 	display: block;
 }

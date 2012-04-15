@@ -18,7 +18,6 @@ class Blog extends CI_Controller {
 	}
 	public function view($slug)
 	{
-		$data['comments'] = $this->comments_model->get_comment();
 		$this->load->helper('form');
 		$this->load->library('form_validation');
 
@@ -31,27 +30,26 @@ class Blog extends CI_Controller {
 
 		$data['title'] = $data['blog_item']['title'];
 		
+		$data['comments'] = $this->comments_model->get_comment($slug);
 
-		$this->load->view('templates/header', $data);
-		$this->load->view('blog/view', $data);
-		$this->load->view('templates/footer');
 
-	}
-	public function reply()
-	{
-		$this->load->helper('form');
-		$this->load->library('form_validation');
-
-		$this->form_validation->set_rules('location','Location','required');
+		/* Check for reply input */
 		$this->form_validation->set_rules('author','Author','optional');
 		$this->form_validation->set_rules('text','Text','required');
 
 		if ($this->form_validation->run() === TRUE) 
 		{
-			$this->comments_model->set_comment();
+			$this->load->helper('url');		
+			$this->comments_model->set_comment($slug);
+			redirect('/'.$slug, 'refresh');
+		}
+		else
+		{
+			$this->load->view('templates/header', $data);
+			$this->load->view('blog/view', $data);
+			$this->load->view('templates/footer');
 		}
 
-		$this->index();
 	}
 	public function post()
 	{

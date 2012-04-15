@@ -15,10 +15,10 @@ class Comments_model extends CI_Model {
 			return $query->result_array();
 		}
 		
-		$query = $this->db->get_where('comments', array('location' => $location));
-		return $query->row_array();
+		$query = $this->db->get_where('comments', array('location' => $location) );
+		return $query->result_array();
 	}
-	public function set_comment()
+	public function set_comment($location)
 	{
 		# If the author isn't set, put "Anonymous" in the db
 		if ($this->input->post('author') === "" ) { $author = "Anonymous"; }
@@ -27,7 +27,7 @@ class Comments_model extends CI_Model {
 		$data = array(
 			'author'   => $author
 		,	'text'     => $this->input->post('text')
-		,	'location' => $this->input->post('location')
+		,	'location' => $location
 		);
 		return $this->db->insert('comments',$data);
 	}

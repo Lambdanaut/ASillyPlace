@@ -40,7 +40,7 @@
 
 $route['meta/about'] = 'meta/about';
 $route['blog/post'] = 'blog/post';
-$route['blog/reply'] = 'blog/reply';
+$route['blog/view/(:any)'] = 'blog/view/$1';
 $route['(:any)'] = 'blog/view/$1';
 $route['default_controller'] = 'blog/index';
 

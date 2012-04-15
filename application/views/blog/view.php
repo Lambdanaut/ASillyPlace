@@ -21,11 +21,10 @@
 
 <?php endforeach ?>
 
-<?php echo form_open('blog/reply') ?>
+<?php echo form_open('blog/view/'.$blog_item['slug']) ?>
 
 	<div style="height: 300px;">
 		<div style="text-align:center; margin-top: 50px;"><strong>Reply To Post</strong></div>
-		<input type="hidden" name="location" value="<?php echo $blog_item["id"]; ?>">
 		<label>Your Name(Optional): </label>
 		<input type="text" name="author" />
 
