@@ -10,6 +10,7 @@ Deploy
 To run ASillyPlace, clone the site into the root directory of your server and run 
 
 > CREATE DATABASE test;
+> 
 > CREATE TABLE blog (
 >	id int(11) NOT NULL AUTO_INCREMENT,
 >	title varchar(128) NOT NULL,
