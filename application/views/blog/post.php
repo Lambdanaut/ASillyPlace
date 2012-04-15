@@ -4,16 +4,18 @@
 
 <?php echo form_open('blog/post') ?>
 
-	<label for="title">Title: </label>
-	<input type="input" name="title">
+	<div style="height: 350px;">
+		<label>Title: </label>
+		<input type="text" name="title" />
 
-	<label for="author">Your Name(Optional): </label>
-	<input type="input" name="author">
+		<label>Your Name(Optional): </label>
+		<input type="text" name="author" />
 
-	<label for="text">Text: </label>
-	<textarea name="text"></textarea>
-	
-	<input type="submit" name="submit" value="Post your Post Posthaste"> 
+		<label>Text: </label>
+		<textarea name="text"></textarea>
+
+	</div>	
+	<input type="submit" name="submit" value="Post your Post Posthaste" style="margin: auto; width: 220px;" />
 
 </form>
 
