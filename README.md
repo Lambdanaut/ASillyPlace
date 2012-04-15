@@ -11,6 +11,8 @@ To run ASillyPlace, clone the site into the root directory of your server and ru
 
 > CREATE DATABASE test;
 > 
+> use test;
+> 
 > CREATE TABLE blog (
 > 
 >	id INT(11) NOT NULL AUTO_INCREMENT,
