@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://asillyplace.herokuapp.com';
+$config['base_url']	= 'http://127.0.0.1';
 
 /*
 |--------------------------------------------------------------------------
@@ -26,7 +26,7 @@ $config['base_url']	= 'http://asillyplace.herokuapp.com';
 | variable so that it is blank.
 |
 */
-$config['index_page'] = 'blog/index.php';
+$config['index_page'] = 'index.php';
 
 /*
 |--------------------------------------------------------------------------

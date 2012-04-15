@@ -23,6 +23,8 @@ To run ASillyPlace, clone the site into the root directory of your server and ru
 > 
 >	text TEXT NOT NULL,
 > 
+> 	date DATE,
+> 
 >	PRIMARY KEY (id),
 > 
 >	KEY slug (slug)
