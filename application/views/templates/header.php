@@ -10,7 +10,7 @@
 </head>
 <body>
 	<div id="header">
-		<span id="navigation"><a href="/meta/about">About</a> | <a href="mailto:personettelabs@gmail.com">Contact</a></span>
+		<span id="navigation"><a href="/blog/post">Post</a> | <a href="/meta/about">About</a> | <a href="mailto:personettelabs@gmail.com">Contact</a></span>
 		<h1><a href="/">A Silly Place</a></h1>
 	</div>
 	<div id="content">

@@ -8,3 +8,32 @@
 		<?php echo $blog_item['text'] ?>
 	</div>
 </div>
+
+<?php foreach ($comments as $comment): ?>
+	<div class="reply">
+		<div class="meta">
+			<strong><?php echo $comment['author']; ?></strong> said: 
+		</div>
+		<div class="text">
+			<blockquote><?php echo $comment['text'] ?></blockquote>
+		</div>
+	</div>
+
+<?php endforeach ?>
+
+<?php echo form_open('blog/reply') ?>
+
+	<div style="height: 300px;">
+		<div style="text-align:center; margin-top: 50px;"><strong>Reply To Post</strong></div>
+		<input type="hidden" name="location" value="<?php echo $blog_item["id"]; ?>">
+		<label>Your Name(Optional): </label>
+		<input type="text" name="author" />
+
+		<label>Text: </label>
+		<textarea name="text"></textarea>
+
+	</div>	
+	<input type="submit" name="submit" value="Reply" style="margin: auto; width: 100px;" />
+
+</form>
+

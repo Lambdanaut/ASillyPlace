@@ -131,10 +131,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', end
 	display: block;
 	margin: 1em 0 1em 0.5em;
 }
-#postLink {
-	text-align: center;
-	padding-bottom: 20px;
-	border-bottom: solid 1px #E4CDCD;
+.reply {
+	border-bottom: solid 1px #E4CDCD ;
+	border-left: solid 1px #E4CDCD ;
+	margin-top: 20px;
+	margin-left: 100px;
+}
+.reply .meta {
+	margin-left: 15px;
 }
 footer {
 	height: 30px;

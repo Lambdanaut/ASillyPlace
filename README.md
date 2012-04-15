@@ -1,4 +1,4 @@
-GigSite
+A Silly Place
 =======
 
 A small website written for a job interview.
@@ -13,20 +13,35 @@ To run ASillyPlace, clone the site into the root directory of your server and ru
 > 
 > CREATE TABLE blog (
 > 
->	id int(11) NOT NULL AUTO_INCREMENT,
+>	id INT(11) NOT NULL AUTO_INCREMENT,
 > 
->	title varchar(128) NOT NULL,
+>	title VARCHAR(128) NOT NULL,
 > 
->	author varchar(128) NOT NULL,
+>	author VARCHAR(128) NOT NULL,
 > 
->	slug varchar(128) NOT NULL,
+>	slug VARCHAR(128) NOT NULL,
 > 
->	text text NOT NULL,
+>	text TEXT NOT NULL,
 > 
 >	PRIMARY KEY (id),
 > 
 >	KEY slug (slug)
 > 
 > );
+> 
+> CREATE TABLE comments (
+> 
+>	id int(11) NOT NULL AUTO_INCREMENT,
+> 
+>	author VARCHAR(128) NOT NULL,
+> 
+>	text TEXT NOT NULL,
+>	
+>	location VARCHAR(128) NOT NULL,
+> 
+>	primary key(id)
+> 
+> );
 
-The server connects to the database under "root" using no password by default. You can edit this in /application/config/database.py
+
+The server connects to the database under "root" using no password by default. You can edit this in **/application/config/database.py**

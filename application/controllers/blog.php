@@ -5,6 +5,7 @@ class Blog extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->model('blog_model');
+		$this->load->model('comments_model');
 	}
 	public function index()
 	{
@@ -17,6 +18,10 @@ class Blog extends CI_Controller {
 	}
 	public function view($slug)
 	{
+		$data['comments'] = $this->comments_model->get_comment();
+		$this->load->helper('form');
+		$this->load->library('form_validation');
+
 		$data['blog_item'] = $this->blog_model->get_blog($slug);
 
 		if (empty($data['blog_item']))
@@ -25,10 +30,28 @@ class Blog extends CI_Controller {
 		}
 
 		$data['title'] = $data['blog_item']['title'];
+		
 
 		$this->load->view('templates/header', $data);
 		$this->load->view('blog/view', $data);
 		$this->load->view('templates/footer');
+
+	}
+	public function reply()
+	{
+		$this->load->helper('form');
+		$this->load->library('form_validation');
+
+		$this->form_validation->set_rules('location','Location','required');
+		$this->form_validation->set_rules('author','Author','optional');
+		$this->form_validation->set_rules('text','Text','required');
+
+		if ($this->form_validation->run() === TRUE) 
+		{
+			$this->comments_model->set_comment();
+		}
+
+		$this->index();
 	}
 	public function post()
 	{
