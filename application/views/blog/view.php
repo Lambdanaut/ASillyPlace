@@ -21,10 +21,12 @@
 
 <?php endforeach ?>
 
+
 <?php echo form_open('blog/view/'.$blog_item['slug']) ?>
 
 	<div style="height: 300px;">
 		<div style="text-align:center; margin-top: 50px;"><strong>Reply To Post</strong></div>
+		<?php echo validation_errors(); ?>
 		<label>Your Name(Optional): </label>
 		<input type="text" name="author" />
 

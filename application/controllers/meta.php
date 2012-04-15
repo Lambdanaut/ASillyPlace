@@ -1,5 +1,6 @@
 <?php
 
+/* Controller for the about page and other future "meta" related pages */
 class Meta extends CI_Controller {
 	public function about()
 	{

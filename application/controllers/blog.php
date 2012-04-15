@@ -1,5 +1,6 @@
 <?php
 
+/* Controlls all posts & and replies */
 class Blog extends CI_Controller {
 	public function __construct ()
 	{
@@ -7,6 +8,7 @@ class Blog extends CI_Controller {
 		$this->load->model('blog_model');
 		$this->load->model('comments_model');
 	}
+	/* The front page and a listing of all posts */
 	public function index()
 	{
 		$data['blog'] = $this->blog_model->get_blog();
@@ -16,6 +18,7 @@ class Blog extends CI_Controller {
 		$this->load->view('blog/index', $data);
 		$this->load->view('templates/footer');
 	}
+	/* Posting and viewing replies and reading individual posts. */
 	public function view($slug)
 	{
 		$this->load->helper('form');
@@ -33,24 +36,25 @@ class Blog extends CI_Controller {
 		$data['comments'] = $this->comments_model->get_comment($slug);
 
 
-		/* Check for reply input */
+		/* Reply Validation */
 		$this->form_validation->set_rules('author','Author','optional');
 		$this->form_validation->set_rules('text','Text','required');
 
-		if ($this->form_validation->run() === TRUE) 
-		{
-			$this->load->helper('url');		
-			$this->comments_model->set_comment($slug);
-			redirect('/'.$slug, 'refresh');
-		}
-		else
+		if ($this->form_validation->run() === FALSE) 
 		{
 			$this->load->view('templates/header', $data);
 			$this->load->view('blog/view', $data);
 			$this->load->view('templates/footer');
 		}
+		else
+		{
+			$this->load->helper('url');		
+			$this->comments_model->set_comment($slug);
+			redirect('/'.$slug, 'refresh');
+		}
 
 	}
+	/* Page for making posts */
 	public function post()
 	{
 		$this->load->helper('form');
@@ -58,6 +62,7 @@ class Blog extends CI_Controller {
 
 		$data['title'] = 'Write a Silly Post';
 
+		/* Form Validation */
 		$this->form_validation->set_rules('title','Title','required');
 		$this->form_validation->set_rules('author','Author','optional');
 		$this->form_validation->set_rules('text','Text','required');

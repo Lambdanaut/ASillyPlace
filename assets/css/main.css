@@ -116,6 +116,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', end
 }
 .post {
 	border-bottom: solid 1px #E4CDCD ;
+	overflow: hidden;
 }
 .post h1 a {
 	color: #F5CCCC;
@@ -137,6 +138,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', end
 	border-left: solid 1px #E4CDCD ;
 	margin-top: 20px;
 	margin-left: 100px;
+	overflow: hidden;
 }
 .reply .meta {
 	margin-left: 15px;
