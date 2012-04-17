@@ -22,11 +22,11 @@ h1 {
 	text-shadow: 2px 2px #111111;
 	color: #F5DEDE;
 }
-p { text-indent: 50px; }
-a{color: #FF0000;}
+p {text-indent: 50px;}
+a {color: #FF0000;}
 a:active {color: #CC4444;}
 a:visited {color: #DD0000;}
-a:hover{color: #FF7777;}
+a:hover {color: #FF7777;}
 ul {list-style-type:circle;}
 input {
 	display: block;
@@ -52,11 +52,20 @@ textarea:hover{ height: 200px; }
 label {
 	display: block;
 }
+/* Surround blockquotes in curley quotes */
 blockquote:before {
 	content: '\201C';
 }
 blockquote:after {
 	content: '\201D';
+}
+
+/* Give placeholder text some color */
+::-webkit-input-placeholder {
+    color: #DDBBBB;
+}
+:-moz-placeholder {
+    color: #DDBBBB;
 }
 
 /*
