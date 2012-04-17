@@ -37,13 +37,13 @@
 | in the URL cannot be matched to a valid route.
 |
 */
+$route['404_override'] = 'error/error_404';
 
 $route['meta/aboutSP'] = 'meta/about_sp';
 $route['blog/post'] = 'blog/post';
 $route['blog/view/(:any)'] = 'blog/view/$1';
 $route['(:any)'] = 'blog/view/$1';
 $route['default_controller'] = 'blog/index';
-
 
 // $route['meta/aboutME'] = 'meta/about_me';
 

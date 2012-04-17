@@ -44,7 +44,7 @@ class Blog extends CI_Controller {
 		$this->form_validation->set_rules('author', 'Author', 'optional');
 		$this->form_validation->set_rules('text', 'Text', 'required');
 
-		if ($this->form_validation->run() === FALSE) 
+		if ($this->form_validation->run() === false) 
 		{
 			$this->load->view('templates/header', $data);
 			$this->load->view('blog/view');
@@ -79,7 +79,7 @@ class Blog extends CI_Controller {
 		$this->form_validation->set_rules('author', 'Author', 'optional');
 		$this->form_validation->set_rules('text', 'Text', 'required');
 
-		if ($this->form_validation->run() === FALSE) 
+		if ($this->form_validation->run() === false) 
 		{
 			$this->load->view('templates/header', $data);
 			$this->load->view('blog/post');
@@ -91,7 +91,7 @@ class Blog extends CI_Controller {
 			// (I'd probably add the primary key 'id' rather than some random string in a production environment, but this'll do for now.) 
 			$this->load->helper('silly');	
 			$this->load->helper('url');				
-			$slug=rand_string() . "-" . url_title($this->input->post('title'), 'dash', TRUE);
+			$slug=rand_string() . "-" . url_title($this->input->post('title'), 'dash', true);
 									
 			// Load form inputs and send them to the model.
 			$query = array(
