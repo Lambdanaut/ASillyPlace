@@ -1,0 +1,22 @@
+/* the humans responsible & colophon */
+/* humanstxt.org */
+
+
+/* CODER */
+  Josh Thomas
+  Site: https://github.com/Lambdanaut/ASillyPlace
+  Location: Wilmington, NC
+
+/* THANKS */
+  Locke Bircher - He told me what to do and gave some excellent pointers! 
+
+/* SITE */
+  Language: English
+  Standards: HTML5, CSS3
+  Software: Windows, Linux, Apache, MySQL, PHP, CodeIgniter
+  IDE: Notepad++, vim
+
+  .    .-... .      .-..          
+ /_\   `-..| | . .  |-'| .-. .-.-,
+'   '  `-'''-'-'-|  '  '-`-`-`-`'-
+               `-'                

@@ -1,6 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Ubuntu:400,700,400italic,700italic);
 
-/* Pink Highlight */
+/* Pink Text Highlight */
 ::selection {
    background: #ffb7b7; /* Safari */
    }
@@ -22,10 +22,10 @@ h1 {
 	text-shadow: 2px 2px #111111;
 	color: #F5DEDE;
 }
-a         {color: #FF0000;}
-a:active  {color: #CC4444;}
+a{color: #FF0000;}
+a:active {color: #CC4444;}
 a:visited {color: #DD0000;}
-a:hover   {color: #FF7777;}
+a:hover{color: #FF7777;}
 input {
 	display: block;
 	border: solid 1px #E4BBBB;
@@ -56,7 +56,11 @@ blockquote:before {
 blockquote:after {
 	content: '\201D';
 }
-#header {
+
+/*
+ * Red Gradient Header Bar
+ */
+header {
 	position: absolute;
 	top: 0px; left: 0px;
 	width: 100%;
@@ -70,40 +74,57 @@ blockquote:after {
 	background: -o-linear-gradient(top, #a90329 0%,#8f0222 44%,#6d0019 100%); /* Opera 11.10+ */
 	background: -ms-linear-gradient(top, #a90329 0%,#8f0222 44%,#6d0019 100%); /* IE10+ */
 	background: linear-gradient(top, #a90329 0%,#8f0222 44%,#6d0019 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019',GradientType=0 ); /* IE6-9 */	
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019',GradientType=0 ); /* IE6-9 */	
 }
-#header h1 {
+header h1 {
 	font-size: 1.5em;
 	letter-spacing:0.08em;
 	margin: 5px 0 5px 30px;
 	text-shadow: 2px 2px #111111;
 	color: #F5DEDE;
 }
-#header a {
+header a {
 	color: inherit;
 	text-decoration: none;
 }
-#navigation {
+header a:visited { color: inherit; }
+nav{
 	float: right;
 	color: #F5CCCC;
 	margin-top: 10px;
 	margin-right: 25px;
 	text-shadow: 2px 2px #111111;
 }
-#navigation a:hover {
+nav a:hover {
+	color: inherit;
 	border-bottom: solid 1px #E4CDCD;	
 }
-.starLeft {
+
+/*
+ * Star Backgrounds 
+ * Positioned slightly behind the content on the left and right 
+ */
+.star {
 	position: relative;
-	left: -238px;
-	height: 0px; width: 0px;
+	width: 0; height: 0;
 	z-index: -1;
+	background-color: transparent;
 }
-.starRight {
-	position: relative;
-	left: 870px;
-	height: 0px; width: 0px;
-	z-index: -1;
+.star::before {
+	content: " ";
+	position: absolute;
+	width: 165px;
+	height: 500px;
+	z-index: -2;
+	background-repeat: no-repeat;
+}
+.starLeft::before {
+	background-image: url(/assets/image/starLeft.png);
+	left: -225px;
+}
+.starRight::before {
+	background-image: url(/assets/image/starRight.png);
+	left: 875px;
 }
 #content {
 	margin-top: 0px;
@@ -114,6 +135,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', end
 	border-radius: 0 0 20px 20px;
 	box-shadow: inset 0px 2px 3px #110000;
 }
+
+/*
+ * Individual Posts and Replies
+ */
 .post {
 	border-bottom: solid 1px #E4CDCD ;
 	overflow: hidden;
@@ -143,6 +168,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', end
 .reply .meta {
 	margin-left: 15px;
 }
+
+/*
+ * A tab at the bottom for displaying copyright
+ */
 footer {
 	height: 30px;
 	margin-top: 30px;

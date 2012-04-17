@@ -6,30 +6,20 @@ class Comments_model extends CI_Model {
 		parent::__construct();
 		$this->load->database();
 	}
-
-	public function get_comment($location=False)
+	// Returns an array of comments that are all located at the post of the slug: $location
+	public function get_comments_at($location)
 	{
-		if ($location === FALSE)
-		{
-			$query = $this->db->get('comments');
-			return $query->result_array();
-		}
-		
 		$query = $this->db->get_where('comments', array('location' => $location) );
 		return $query->result_array();
 	}
-	public function set_comment($location)
+	public function get_all_comments()
 	{
-		# If the author isn't set, put "Anonymous" in the db
-		if ($this->input->post('author') === "" ) { $author = "Anonymous"; }
-		else { $author = $this->input->post('author'); }
-		# Insert Post into Database
-		$data = array(
-			'author'   => $author
-		,	'text'     => $this->input->post('text')
-		,	'location' => $location
-		);
-		return $this->db->insert('comments',$data);
+		$query = $this->db->get('comments');
+		return $query->result_array();		
+	}
+	// Insert Comment into Database
+	public function create_comment($query)
+	{
+		return $this->db->insert('comments', $query);
 	}
 }
-
