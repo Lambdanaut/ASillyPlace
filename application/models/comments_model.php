@@ -6,7 +6,7 @@ class Comments_model extends CI_Model {
 		parent::__construct();
 		$this->load->database();
 	}
-	// Returns an array of comments that are all located at the post of the slug: $location
+	// Returns an array of comments that are all replies to the post $location
 	public function get_comments_at($location)
 	{
 		$query = $this->db->get_where('comments', array('location' => $location) );

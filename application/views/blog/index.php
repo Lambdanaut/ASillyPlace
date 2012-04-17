@@ -1,6 +1,6 @@
 <?php if (count ($blog) == 0): ?>
-	<div style="text-align:center;">
-		<p>It looks like there aren't any posts yet. Why don't you...</p>
+	<div style="text-align:center; margin-top: 125px;">
+		It looks like there aren't any posts yet. Why don't you...
 		<h2><a href="/blog/post"> Make One </a></h2>
 	</div>
 <?php endif; ?>
@@ -8,7 +8,7 @@
 	<div class="post">
 		<h1><a href="/<?php echo $blog_item['slug'] ?>"><?php echo $blog_item['title'] ?></a></h1>
 		<div class="meta">
-			<strong>Posted: </strong><i><?php echo $blog_item['date'] ?></i><br />
+			<strong>Posted: </strong><i><?php echo $blog_item['date'] ?></i><br>
 			<strong>By: </strong><i><?php echo $blog_item['author']; ?></i>
 		</div>
 		<div class="text">

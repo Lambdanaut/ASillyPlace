@@ -6,16 +6,15 @@
 
 	<div style="height: 350px;">
 		<label>Title: </label>
-		<input type="text" name="title" />
+		<input type="text" name="title" autofocus>
 
-		<label>Your Name(Optional): </label>
-		<input type="text" name="author" />
+		<label>Your Name: </label>
+		<input type="text" name="author" placeholder="Optional">
 
 		<label>Text: </label>
 		<textarea name="text"></textarea>
 
 	</div>	
-	<input type="submit" name="submit" value="Post your Post Posthaste" style="margin: auto; width: 220px;" />
+	<input type="submit" name="submit" value="Post your Post Posthaste" style="margin: auto; width: 220px;">
 
 </form>
-

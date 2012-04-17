@@ -38,11 +38,14 @@
 |
 */
 
-$route['meta/about'] = 'meta/about';
+$route['meta/aboutSP'] = 'meta/about_sp';
 $route['blog/post'] = 'blog/post';
 $route['blog/view/(:any)'] = 'blog/view/$1';
 $route['(:any)'] = 'blog/view/$1';
 $route['default_controller'] = 'blog/index';
+
+
+// $route['meta/aboutME'] = 'meta/about_me';
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

@@ -5,7 +5,6 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
 	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	
 	<title><?php echo $title ?></title>
 	<meta name="author" content="Joshy">
@@ -22,7 +21,7 @@
 <body>
 	<header>
 		<nav>
-			<a href="/blog/post">Post</a> | <a href="/meta/about">About</a> | <a href="mailto:personettelabs@gmail.com">Contact</a>
+			<a href="/blog/post">Post</a> | <a href="/meta/aboutSP">About</a> | <a href="mailto:personettelabs@gmail.com">Contact</a>
 		</nav>
 		<h1><a href="/">A Silly Place</a></h1>
 	</header>

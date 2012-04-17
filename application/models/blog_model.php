@@ -23,4 +23,3 @@ class Blog_model extends CI_Model {
 		return $this->db->insert('blog', $query);
 	}
 }
-
